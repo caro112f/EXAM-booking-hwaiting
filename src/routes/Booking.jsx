@@ -1,5 +1,6 @@
 import Basket from "../components/Basket";
 
+//henter alle sub-routes
 import Tickets from "./Tickets";
 import CampingSpots from "./CampingSpots";
 import Additionals from "./Additionals";
@@ -14,6 +15,7 @@ import { useContext } from "react";
 import { BasketContext } from "../contexts/basket";
 
 export default function Booking() {
+  //her defineres alle vores states
   const [campingData, setCampingData] = useState([]);
   const [ticketNo, setTicketNo] = useState(0);
   const [reservationData, setReservationData] = useState();
@@ -22,8 +24,7 @@ export default function Booking() {
   const [ticketHolderData, setTicketHolderData] = useState({});
   const { basket } = useContext(BasketContext);
 
-  // console.log(reservationData);
-
+  //her er vores ticket data som array
   const tickets = [
     {
       id: 1,
@@ -38,7 +39,7 @@ export default function Booking() {
       productType: "ticket",
     },
   ];
-
+  //her er vores tents data som array
   const additionals = [
     {
       type: "2 person tent",
@@ -55,7 +56,7 @@ export default function Booking() {
       pers: 3,
     },
   ];
-
+  //her er vores gogreen data som object
   const gogreen = {
     type: "Go Green",
     productType: "gogreen",
@@ -121,9 +122,6 @@ export default function Booking() {
 
   for (let i = 0; i < persAmount.length; i++) {
     allPersInBasketNo += persAmount[i];
-
-    /*  console.log("det er mig du skal kigge på", allPersInBasketNo);
-      console.log("juhu, det er mig", tentsAmount); */
   }
 
   let fullAmountOfPers = tentsAmount * allPersInBasketNo;
@@ -172,6 +170,7 @@ export default function Booking() {
           path=""
           element={
             <Tickets
+              //her sender vi data videre - på samme måde som med de andre subroutes
               ticketNo={ticketNo}
               ticketData={tickets}
               dataCamping={campingData}

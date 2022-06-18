@@ -33,10 +33,10 @@
   }
   button {
     //background-color: rgba(255, 255, 255, 0);
-    background-color: vars.$neonpink;
+    background-color: vars.$background-blue;
     border-radius: 5px;
-    //border: 5px solid vars.$neonblue;
-    box-shadow: 0px 0px 10px vars.$lightneonpink;
+    border: 3px solid vars.$neongreen;
+    //box-shadow: 0px 0px 10px vars.$lightneongreen;
     padding: 4px 8px 4px 8px;
     @include mixins.bp-medium {
       padding: 0.5rem 1.5rem 0.5rem 1.5rem;
@@ -45,7 +45,7 @@
 
   button:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 22px vars.$lightneonpink;
+    box-shadow: 0px 0px 22px vars.$lightneongreen;
   }
 
   h2 {

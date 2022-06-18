@@ -133,7 +133,11 @@ export default function Step5({
           </div>
           <div className="card-number">
             <label>Card number</label>
-            <NumberFormat format="#### #### #### ####" mask="_" />
+            <NumberFormat
+              format="#### #### #### ####"
+              mask="_"
+              placeholder="0000 0000 0000 0000"
+            />
           </div>
 
           <div className="expire">
@@ -144,7 +148,10 @@ export default function Step5({
               name="expirydate"
               className="expiry-date"
               format={cardExpiry}
+              placeholder="MM/YY"
             />
+            {/* hvis setExpireDate er sat til true i vores if-else i submit, skal
+            den komme med warning i dette felt */}
             {expireDate ? (
               <p className="error-msg">Invalid expiry date</p>
             ) : null}

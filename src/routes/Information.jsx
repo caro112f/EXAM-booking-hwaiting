@@ -25,7 +25,8 @@ export default function Step4({
 
   let id = reservationData["id"];
 
-  //preventdefault makes sure it does not refresh the page when submitting
+  //e.target.value finder indtastede værdi i værdi og opbevarer det i setF
+
   const fNameChanged = (e) => {
     setFname(e.target.value);
   };
@@ -49,6 +50,7 @@ export default function Step4({
   };
 
   const onSubmit = (e) => {
+    //preventdefault makes sure it does not refresh the page when submitting
     e.preventDefault();
 
     //if we only have 1 guest we cannot map
@@ -62,6 +64,9 @@ export default function Step4({
       };
       setData(oneGuest);
     } else if (ticketsinBasketNo >= 3) {
+      //generelt: hvis der er flere gæster laver vi arrays med firstname, lastname og email, hvor de enkelte værdiger bliver sat sammen,
+      //herefter returnerer vi et object med fuldenavn og email, og dette object med data sender vi videre til setData funktion
+
       console.log("3 tickets");
       //if more than one guest
       let guestFirstNames = [];
@@ -111,6 +116,8 @@ export default function Step4({
 
     navigate("/booking/payment");
   };
+
+  //kode fra dokumentation på select country list og hvordan man styler den
   const selectstyles = {
     control: (styles) => ({
       ...styles,

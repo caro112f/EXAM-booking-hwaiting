@@ -50,8 +50,7 @@ export default function Confirmation({ ticketData, fullPrice }) {
   }
 
   function transactionComplete() {
-    console.log("oops");
-
+    //sørger for basket tømmes når man går til home
     setBasket((oldState) => ({
       oldState,
       tickets: [],
@@ -59,7 +58,7 @@ export default function Confirmation({ ticketData, fullPrice }) {
       tentsBA: [],
       gogreenBA: {},
     }));
-
+    //navigerer til forsiden
     navigateFinished("/");
   }
 

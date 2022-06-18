@@ -9,7 +9,9 @@ export default function Ticket(props) {
     if (props.ticketsinBasketNo > props.ticketNo) {
       alert("0 tickets left");
     } else {
+      //tjekker om der allerede er et item i basket med samme id
       if (basket.tickets.find((ticket) => ticket.id === props.ticket.id)) {
+        //hvis true skal den opdatere basket med en kopi af det fundne id, hvor amount er +1, så man kan købe flere
         setBasket((old) => {
           const mapped = old.tickets.map((ticket) => {
             if (ticket.id === props.ticket.id) {
@@ -25,7 +27,7 @@ export default function Ticket(props) {
           return { ...old, tickets: mapped };
         });
       } else {
-        // setBasket((oldState) => [...oldState, { ...props.ticket, amount: 1 }]);
+        //hvis false skal den bare tilføje id for første gang i basket
         setBasket((oldState) => ({
           ...oldState,
           tickets: [...oldState.tickets, { ...props.ticket, amount: 1 }],

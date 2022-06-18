@@ -8,7 +8,7 @@ h1 {
 
   color: white;
   @include mixins.bp-medium {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   //color: vars.$secondary;

@@ -1,4 +1,6 @@
 import lightStickImg from "../images/lightstick.svg";
+import { Link } from "react-router-dom";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 
 export default function CampingInfo() {
   return (
@@ -61,6 +63,12 @@ export default function CampingInfo() {
             </p>
           </div>
         </section>
+        <div className="back-step">
+          <Link to="/booking/campingspots" id="back-link">
+            {" "}
+            <ArrowLeftOutlined id="arrowleft" /> Back to booking
+          </Link>
+        </div>
       </main>
     </>
   );

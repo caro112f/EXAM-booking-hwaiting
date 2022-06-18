@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import backgroundimage from "../images/background-filter.webp";
-import vinylImg from "../images/vinyl.svg";
+import backgroundimage from "../images/splash_img.svg";
+//import vinylImg from "../images/vinyl.svg";
 
 export default function Home(props) {
   return (
@@ -10,20 +10,20 @@ export default function Home(props) {
         style={{ backgroundImage: `url(${backgroundimage})` }}
       >
         <div className="heading-wrapper">
-          <h1 id="glow-h1">HWAITING</h1>
-          <p>Scandinavias biggest K-pop festival!</p>
+          <h1 id="glow-h1">BOOK TICKETS HERE</h1>
+          <p>Welcome to our booking site</p>
         </div>
         <Link to="/booking">
           <button id="home-buylink">
-            <p className="link-p">Buy Tickets</p>
+            <p className="link-p">Start Booking</p>
           </button>
         </Link>
       </section>
-      <section id="home-divider">
+      {/* <section id="home-divider">
         <p>화이팅</p> <p>HWAITING</p> <p>화이팅</p> <p>HWAITING</p>{" "}
         <p>화이팅</p>
-      </section>
-      <section id="home-program-section">
+      </section> */}
+      {/* <section id="home-program-section">
         <div>
           <h2 className="pm_font">Curious about the lineup?</h2>
           <p id="home-program-text">
@@ -40,7 +40,7 @@ export default function Home(props) {
           {" "}
           <img id="home-program-img" src={vinylImg} alt="Vinyl"></img>
         </a>
-      </section>
+      </section> */}
     </main>
   );
 }

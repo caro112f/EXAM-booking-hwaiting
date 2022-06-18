@@ -28,9 +28,10 @@ body {
   }
   .logo:hover {
     transform: scale(1.06);
+    box-shadow: 0px 0px 22px vars.$lightneonblue;
   }
   .logo {
-    width: 3.5rem;
+    width: 2.5rem;
     transition: 0.2s ease-out;
   }
   #navigation {
@@ -107,6 +108,9 @@ body {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+      }
+      li {
+        margin-block: 1rem;
       }
       li:hover {
         transform: scale(1.1);

@@ -5,6 +5,7 @@ import TentOption from "../components/TentOption";
 export default function Step3(props) {
   console.log("goGreen:", props.gogreen);
 
+  //funktion der opdaterer state for freezeTents og sætter den til true
   function freezeTents() {
     props.setFreezeTents(true);
   }
@@ -43,6 +44,7 @@ export default function Step3(props) {
           className="next-step"
           id="extrapadding"
           to="/booking/information"
+          //når man klikker på "next" aktiveres funktion der sætter freezeTents til true
           onClick={freezeTents}
         >
           Next

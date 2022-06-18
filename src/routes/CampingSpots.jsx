@@ -7,10 +7,11 @@ import { ArrowLeftOutlined } from "@ant-design/icons";
 export default function Step2(props) {
   const { basket } = useContext(BasketContext);
 
+  //finder area i vores backet.js, og laver det til et string
   let areaInBasket = basket.campingSpot.map(({ area, ...rest }) => {
     return area.toString();
   });
-
+  //bruger shift så vi kun får første string ud af dette array
   let areaAsString = areaInBasket.shift();
 
   function reserve() {
@@ -30,7 +31,7 @@ export default function Step2(props) {
       .then((data) => props.setReservationData(data))
       .catch((err) => console.error(err));
   }
-
+  //finder camping spot price som vi skal bruge til at displaye, da prisen er samme for alle bruger vi bare campPrice direkte
   let campPrice = props.dataCamping.map(({ price, ...rest }) => {
     return price;
   });
