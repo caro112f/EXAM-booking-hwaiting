@@ -35,7 +35,11 @@ function App() {
       <section id="navigation">
         <nav>
           <div id="logo_wrapper">
-            <a href="https://exam-app-hwaiting.netlify.app/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://exam-app-hwaiting.detblaarum.dk/"
+            >
               {" "}
               <img src={logo} className="logo" alt="" />
             </a>
@@ -52,7 +56,7 @@ function App() {
                   rel="noreferrer"
                   id="header_link"
                   className="nav-link"
-                  href="https://exam-app-hwaiting.netlify.app/"
+                  href="https://exam-app-hwaiting.detblaarum.dk/"
                   onClick={ToggleBurgermenu}
                 >
                   {" "}
@@ -87,7 +91,7 @@ function App() {
                   rel="noreferrer"
                   id="header_link"
                   className="nav-link"
-                  href="https://exam-app-hwaiting.netlify.app/artists"
+                  href="https://exam-app-hwaiting.detblaarum.dk/"
                   onClick={ToggleBurgermenu}
                 >
                   {" "}
@@ -100,7 +104,7 @@ function App() {
                   rel="noreferrer"
                   id="header_link"
                   className="nav-link"
-                  href="https://exam-app-hwaiting.netlify.app/program"
+                  href="https://exam-app-hwaiting.detblaarum.dk/"
                   onClick={ToggleBurgermenu}
                 >
                   {" "}
