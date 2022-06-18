@@ -35,10 +35,10 @@ function App() {
       <section id="navigation">
         <nav>
           <div id="logo_wrapper">
-            <Link to="/">
+            <a href="https://exam-app-hwaiting.netlify.app/">
               {" "}
               <img src={logo} className="logo" alt="" />
-            </Link>
+            </a>
 
             <p>8/8-14/8</p>
           </div>
@@ -47,15 +47,17 @@ function App() {
             <ul>
               <li>
                 {/* kalder på togglefunktion ved click på menu links */}
-                <Link
+                <a
+                  target="_blank"
+                  rel="noreferrer"
                   id="header_link"
                   className="nav-link"
-                  to="/"
+                  href="https://exam-app-hwaiting.netlify.app/"
                   onClick={ToggleBurgermenu}
                 >
                   {" "}
                   <p className="link-p">Home</p>{" "}
-                </Link>
+                </a>
               </li>
               <li>
                 <Link
@@ -76,30 +78,34 @@ function App() {
                   onClick={ToggleBurgermenu}
                 >
                   {" "}
-                  <p className="link-p">Buy Tickets</p>{" "}
+                  <p className="link-p">Start Booking</p>{" "}
                 </Link>
               </li>
               <li>
-                <Link
+                <a
+                  target="_blank"
+                  rel="noreferrer"
                   id="header_link"
                   className="nav-link"
-                  to="/booking"
+                  href="https://exam-app-hwaiting.netlify.app/artists"
                   onClick={ToggleBurgermenu}
                 >
                   {" "}
                   <p className="link-p">See Artist</p>{" "}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
+                  target="_blank"
+                  rel="noreferrer"
                   id="header_link"
                   className="nav-link"
-                  to="/booking"
+                  href="https://exam-app-hwaiting.netlify.app/program"
                   onClick={ToggleBurgermenu}
                 >
                   {" "}
                   <p className="link-p">See Schedule</p>{" "}
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
